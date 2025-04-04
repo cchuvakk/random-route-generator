@@ -1,4 +1,4 @@
-package Entities;
+package com.lolkekwpog.random_route_generator.entities;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;

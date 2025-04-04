@@ -1,4 +1,4 @@
-package Entities;
+package com.lolkekwpog.random_route_generator.entities;
 
 import java.util.Date;
 
@@ -9,6 +9,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import jakarta.persistence.Table;
 
@@ -23,7 +24,7 @@ public class Routes {
     )
     private int id;
 
-    @OneToMany
+    @ManyToOne
     (
         cascade = CascadeType.ALL
     )
