@@ -1,16 +1,62 @@
 package Entities;
 
+import jakarta.persistence.CascadeType;
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "UserStats")
 public class UserStats {
+    @Id
+    @GeneratedValue
+    (
+        strategy = GenerationType.IDENTITY
+    )
     private int id;
+
+    @OneToOne
+    (
+        cascade = CascadeType.ALL
+    )
+    @JoinColumn
+    (
+        name = "userid",
+        referencedColumnName = "id"
+    )
     private Users user;
+
+    @Column
+    (
+        name = "completed_routes",
+        columnDefinition = "integer default '0'"
+    )
     private int completed_routes;
+
+    @Column
+    (
+        name = "completion_streak",
+        columnDefinition = "integer default '0'"
+    )
     private int completion_streak;
+
+    @Column
+    (
+        name = "skipped_routes",
+        columnDefinition = "integer default '0'"
+    )
     private int skipped_routes;
+
+    @Column
+    (
+        name = "distance_traveled",
+        columnDefinition = "double precision default '0'"
+    )
     private double distance_traveled;
 
     public UserStats(int id, Users user, int completed_routes, int completion_streak, int skipped_routes, double distance_traveled)
