@@ -1,7 +1,17 @@
 <div class="login-container">
-    <h2>Добро пожаловать!</h2>
-    <form (ngSubmit)="onLogin()">
-        <label for="user">Введите почту:</label>
-        <label for="password">Введите пароль:</label>
-    </form>
+    <div class = "login header">
+        <header>Войти</header>
+    </div>
+    <div class = "input-box">
+        <input type="email" class="input-field" placeholder="Почта" autocomplete="off" required>
+    </div>
+    <div class="input-box">
+        <input type="password" class="input-field" placeholder="Пароль" autocomplete="off" required>
+    </div>
+    <div class = "forgot">
+        <section>
+            <input type="checkbox" id="check">
+            <label for="check">Запомнить меня</label>
+        </section>
+    </div>
 </div>
