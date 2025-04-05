@@ -2,6 +2,8 @@ package com.lolkekwpog.random_route_generator.entities;
 
 import java.util.Date;
 
+import org.springframework.util.RouteMatcher.Route;
+
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -69,6 +71,8 @@ public class Routes {
         columnDefinition = "timestamp default 'now()'"
     )
     private Date created_at;
+
+    public Routes(){ }
 
     public Routes(int id, Users user, double latitude, double longitude, String address, boolean route_completed, Date created_at)
     {

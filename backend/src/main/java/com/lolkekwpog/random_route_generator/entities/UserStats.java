@@ -1,5 +1,7 @@
 package com.lolkekwpog.random_route_generator.entities;
 
+import org.springframework.boot.autoconfigure.security.SecurityProperties.User;
+
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -58,6 +60,8 @@ public class UserStats {
         columnDefinition = "double precision default '0'"
     )
     private double distance_traveled;
+
+    public UserStats(){ }
 
     public UserStats(int id, Users user, int completed_routes, int completion_streak, int skipped_routes, double distance_traveled)
     {

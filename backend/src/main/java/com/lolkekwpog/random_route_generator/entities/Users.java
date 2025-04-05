@@ -39,6 +39,8 @@ public class Users {
     )
     private String username;
     
+    public Users(){ }
+
     public Users(int id, String firebase_uid, String username)
     {
         this.id = id;
