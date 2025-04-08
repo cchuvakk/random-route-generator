@@ -17,5 +17,7 @@ export class WelcomepageComponent {
   onLogin(){
 
   }//заглушка
-
+  navigateToRegister() {
+    this.router.navigate(['/authpage']); 
+  }
 }
