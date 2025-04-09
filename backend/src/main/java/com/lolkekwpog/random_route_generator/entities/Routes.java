@@ -2,8 +2,6 @@ package com.lolkekwpog.random_route_generator.entities;
 
 import java.util.Date;
 
-import org.springframework.util.RouteMatcher.Route;
-
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;

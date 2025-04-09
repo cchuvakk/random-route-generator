@@ -20,11 +20,11 @@ import com.lolkekwpog.random_route_generator.repository.UsersRepository;
 
 @Service
 public class RoutesService {
-    private String openRoutesServiceURL = "https://api.openrouteservice.org/pois";
-    private String openRoutesServiceAPIKEY = System.getenv("OPEN_ROUTES_API_KEY");
+   final private String openRoutesServiceURL = "https://api.openrouteservice.org/pois";
+   final private String openRoutesServiceAPIKEY = System.getenv("OPEN_ROUTES_API_KEY");
 
     @Autowired
-    private RoutesRepository routesRepository;
+    final private RoutesRepository routesRepository;
 
     @Autowired
     private UsersRepository usersRepository;
