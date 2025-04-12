@@ -25,9 +25,20 @@ public class RoutesController {
         return routesService.getAllUserRoutes(userId);
     }
 
-    @PostMapping("/create/{userId}/{longitude}/{latitude}")
+    /* использование (для тестирования): честно говоря я не понимаю как оно работает, но, как я понял, в первом параметре должно быть всегда больше?
+    *  чем во втором, например: долгота: 55.7544, широта: 37.6119 <- не заработает! я не знаю почему, мне просто пофиг уже честно говоря
+    *  в общем, нужно делать наоборот: долгота: 37.6119, широта: 55.7544, это либо я тупой, либо что то не так с этим тупым API
+    *  может уберу этот коммент позже!
+    */
+    @PostMapping("/create/{userId}/lo={longitude}/la={latitude}")
     public Routes createUserRoute(@PathVariable int userId, @PathVariable double longitude, @PathVariable double latitude)
     {
         return routesService.pickRandomRoute(userId, longitude, latitude);
+    }
+
+    @PostMapping("user/complete/{routeId}")
+    public Routes completeRoute(@PathVariable int routeId)
+    {
+        return routesService.completeRoute(routeId);
     }
 }

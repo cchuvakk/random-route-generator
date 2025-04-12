@@ -9,5 +9,5 @@ import com.lolkekwpog.random_route_generator.entities.Routes;
 
 @Repository
 public interface RoutesRepository extends JpaRepository<Routes, Integer> {
-    List<Routes> findUserById(int id);
+    List<Routes> findByUserId(int userid);
 }

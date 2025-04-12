@@ -36,17 +36,31 @@ public class RoutesService {
         this.routesRepository = routesRepository;
     }
 
-    public List<Routes> getAllUserRoutes(int id)
+    public List<Routes> getAllUserRoutes(int userid)
     {
-        return routesRepository.findUserById(id);
+        return routesRepository.findByUserId(userid);
+    }
+
+    public Routes completeRoute(int routeId)
+    {
+        Routes route = routesRepository.findById(routeId).orElseThrow(() -> new RuntimeException("Route not found"));
+
+        route.setRouteCompleted(true);
+
+        return routesRepository.save(route);
     }
 
     public Routes pickRandomRoute(int id, double lon, double lat)
     {
         Users user = usersRepository.findById(id).orElseThrow(() -> new RuntimeException("User not found"));
 
-        double bboxLon = lon * 1.00075;
-        double bboxLat = lat * 1.00075;
+        double bboxLon = lon * 1.00022;
+        double bboxLat = lat * 1.00022;
+        
+        System.out.println(lon);
+        System.out.println(lat);
+        System.out.println(bboxLon);
+        System.out.println(bboxLat);
 
         Map<String, Object> requestBody = Map.of(
             "request", "pois",
