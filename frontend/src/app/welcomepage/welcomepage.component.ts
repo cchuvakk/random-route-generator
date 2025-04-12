@@ -10,13 +10,12 @@ import { Router } from '@angular/router';
 export class WelcomepageComponent {
   user: string = '';
   password: string = '';
-  //passwordAccept: string = '';
+  
 
   constructor(private router: Router) {}
 
   onLogin(){
-
-  }//заглушка
+  }
   navigateToRegister() {
     this.router.navigate(['/authpage']); 
   }
