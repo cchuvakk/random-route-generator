@@ -3,10 +3,10 @@
         <header>Войти</header>
     </div>
     <div class ="input-box">
-        <input type="email" class="input-field" placeholder="Почта" autocomplete="off" required>
+        <input type="email" class="input-field" placeholder="Почта" [(ngModel)]="email" autocomplete="off" required>
     </div>
     <div class="input-box">
-        <input type="password" class="input-field" placeholder="Пароль" autocomplete="off" required>
+        <input type="password" class="input-field" placeholder="Пароль" [(ngModel)]="password" autocomplete="off" required>
     </div>
     <div class = "forgot">
         <section>
@@ -22,6 +22,6 @@
         <label for="submit">Войти</label>
     </div>
     <div class = "sign-up-link">
-        <p>Нет аккаунта?<a (click)="navigateToRegister()"> Зарегистрироваться!</a></p>
+        <p>Нет аккаунта?<a href="#" (click)="navigateToRegister()"> Зарегистрироваться!</a></p>
     </div>
 </div>
