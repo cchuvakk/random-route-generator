@@ -25,9 +25,9 @@ public class RoutesController {
         return routesService.getAllUserRoutes(userId);
     }
 
-    @PostMapping("/create/{userId}")
-    public Routes createUserRoute(@PathVariable int userId)
+    @PostMapping("/create/{userId}/{longitude}/{latitude}")
+    public Routes createUserRoute(@PathVariable int userId, @PathVariable double longitude, @PathVariable double latitude)
     {
-        return routesService.pickRandomRoute(userId);
+        return routesService.pickRandomRoute(userId, longitude, latitude);
     }
 }

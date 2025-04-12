@@ -41,12 +41,9 @@ public class RoutesService {
         return routesRepository.findUserById(id);
     }
 
-    public Routes pickRandomRoute(int id)
+    public Routes pickRandomRoute(int id, double lon, double lat)
     {
         Users user = usersRepository.findById(id).orElseThrow(() -> new RuntimeException("User not found"));
-
-        double lon = 8.8034;
-        double lat = 53.0756;
 
         double bboxLon = lon * 1.00075;
         double bboxLat = lat * 1.00075;
