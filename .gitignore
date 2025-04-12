@@ -42,5 +42,6 @@ testem.log
 .DS_Store
 Thumbs.db
 
-# Configs
-/src/environments/environment.ts
+# ConfigsLOOL
+frontend/src/environments/environment.ts
+frontend/src/environments/firebase_config.ts
