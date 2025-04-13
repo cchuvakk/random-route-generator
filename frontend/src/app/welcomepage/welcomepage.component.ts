@@ -3,7 +3,7 @@ import { Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { LoginService } from '../../services/login_service';
-import { ToastrService } from 'ngx-toastr';
+import { ToasterService } from '../toaster/toaster.service';
 
 @Component({
   selector: 'app-welcomepage',
@@ -18,14 +18,18 @@ export class WelcomepageComponent {
   
   constructor(private router: Router,
     private loginService: LoginService,
+    private toasterService: ToasterService
   ) {}
   
+
+
   onLogin(){
     console.log('входим с ',{email:this.email, password:this.password});
     this.loginService.login(this.email, this.password).then(() => {
+      this.toasterService.success('Успешно!', 'Вы вошли в аккаунт!'),
       this.router.navigate(['/mainpage']); 
     }).catch((error) => {
-     
+
     });
   }
   navigateToRegister() {
