@@ -20,11 +20,11 @@ export class WelcomepageComponent {
   ) {}
 
   onLogin(){
+    console.log('входим с ',{email:this.email, password:this.password});
     this.loginService.login(this.email, this.password).then(() => {
-      this.router.navigate(['/authpage']); //изменить на main
+      this.router.navigate(['/mainpage']); 
     }).catch((error) => {
       console.error('Ошибка входа:', error);
-      alert('Неверный email или пароль');
     });
   }
   navigateToRegister() {

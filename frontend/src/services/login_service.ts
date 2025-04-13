@@ -9,6 +9,7 @@ export class LoginService {
 
     login(email: string, password:string): Promise<any> {
         const auth = this.firebase.auth;
+        console.log('входим с:', { email, password });
         return signInWithEmailAndPassword(auth, email, password);
     }
 }

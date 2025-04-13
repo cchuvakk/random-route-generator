@@ -18,10 +18,10 @@
         </section>
     </div>
     <div class = "input-submit">
-        <button class ="submit-btn" id="submit"></button>
+        <button class ="submit-btn" (click)="onLogin()" id="submit"></button>
         <label for="submit">Войти</label>
     </div>
     <div class = "sign-up-link">
-        <p>Нет аккаунта?<a href="#" (click)="navigateToRegister()"> Зарегистрироваться!</a></p>
+        <p>Нет аккаунта?<a (click)="navigateToRegister()"> Зарегистрироваться!</a></p>
     </div>
 </div>
