@@ -29,7 +29,7 @@ export class WelcomepageComponent {
       this.toasterService.success('Успешно!', 'Вы вошли в аккаунт!'),
       this.router.navigate(['/mainpage']); 
     }).catch((error) => {
-
+      this.toasterService.error('Ошибка!', 'Что то пошло не так D:')
     });
   }
   navigateToRegister() {
