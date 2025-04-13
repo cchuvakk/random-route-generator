@@ -2,10 +2,16 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { AuthService } from '../../services/auth_service';
+
+
+
 @Component({
   selector: 'app-authpage',
   standalone: true,
-  imports: [CommonModule, FormsModule],
+  imports: [
+    CommonModule, 
+    FormsModule, 
+  ],
   templateUrl: './authpage.component.html',
   styleUrl: './authpage.component.css'
 })
@@ -15,6 +21,7 @@ export class AuthpageComponent {
   confirmPassword = '';
 
   constructor(private authService: AuthService){}
+  
 
   onRegister(){
     if (this.password !== this.confirmPassword) {

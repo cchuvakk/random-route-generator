@@ -28,19 +28,12 @@ import {
   registerVersion
 } from "./chunk-ZMVIFO2C.js";
 import {
+  __rest
+} from "./chunk-5HRTCKZ7.js";
+import {
   __async,
   __superGet
 } from "./chunk-5K356HEJ.js";
-
-// ../node_modules/tslib/tslib.es6.mjs
-function __rest(s, e) {
-  var t = {};
-  for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0) t[p] = s[p];
-  if (s != null && typeof Object.getOwnPropertySymbols === "function") for (var i = 0, p = Object.getOwnPropertySymbols(s); i < p.length; i++) {
-    if (e.indexOf(p[i]) < 0 && Object.prototype.propertyIsEnumerable.call(s, p[i])) t[p[i]] = s[p[i]];
-  }
-  return t;
-}
 
 // ../node_modules/@firebase/auth/dist/esm2017/index-c92d61ad.js
 var FactorId = {
