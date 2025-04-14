@@ -27,7 +27,6 @@ export class AuthpageComponent {
     if (this.password !== this.confirmPassword) {
       return console.log('Пароли не совпадают');
   }
-
   this.authService.register(this.email, this.password)
       .then(user => console.log('Зарегистрирован:', user))
       .catch(err => console.error('Ошибка регистрации:', err.message));

@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { LoginService } from '../../services/login_service';
 import { ToasterService } from '../toaster/toaster.service';
+import { PsresetService } from '../../services/psreset_service';
 
 @Component({
   selector: 'app-welcomepage',
@@ -18,13 +19,13 @@ export class WelcomepageComponent {
   
   constructor(private router: Router,
     private loginService: LoginService,
-    private toasterService: ToasterService
+    private toasterService: ToasterService,
+    private psresetService: PsresetService
   ) {}
   
 
 
   onLogin(){
-    console.log('входим с ',{email:this.email, password:this.password});
     this.loginService.login(this.email, this.password).then(() => {
       this.toasterService.success('Успешно!', 'Вы вошли в аккаунт!'),
       this.router.navigate(['/mainpage']); 
@@ -32,7 +33,14 @@ export class WelcomepageComponent {
       this.toasterService.error('Ошибка!', 'Что то пошло не так D:')
     });
   }
+
   navigateToRegister() {
     this.router.navigate(['/authpage']); 
+  }
+
+  passwordReset(){
+    this.psresetService.psreset(this.email).then(()=>{
+      this.toasterService.warning('Хм0_0', 'На вашу почту выслано письмо с подтверждением!')
+    })
   }
 }

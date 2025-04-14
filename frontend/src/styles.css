@@ -15,3 +15,7 @@ html, body {
   align-items: center;
   background: #dfdfdf;
 }
+
+a{
+  cursor: pointer;
+}
