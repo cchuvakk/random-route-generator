@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { Component, inject, Renderer2, OnInit } from '@angular/core';
+import { RouterOutlet,NavigationEnd } from '@angular/router';
 import { ToasterComponent } from './toaster/toaster.component';
+import { filter } from 'rxjs';
 
 @Component({
   selector: 'app-root',
