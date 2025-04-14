@@ -1,8 +1,8 @@
 import { RouterModule, Routes } from '@angular/router';
-import { AuthpageComponent } from './authpage/authpage.component';
-import { WelcomepageComponent } from './welcomepage/welcomepage.component';
+import { AuthpageComponent } from './pages/authpage/authpage.component';
+import { WelcomepageComponent } from './pages/welcomepage/welcomepage.component';
 import { NgModule } from '@angular/core';
-import { MainpageComponent } from './mainpage/mainpage.component';
+import { MainpageComponent } from './pages/mainpage/mainpage.component';
 
 export const routes: Routes = [ 
         {path:'', redirectTo:'/welcomepage', pathMatch:'full'},

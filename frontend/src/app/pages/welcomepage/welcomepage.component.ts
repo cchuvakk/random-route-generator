@@ -2,9 +2,9 @@ import { Component, inject } from '@angular/core';
 import { Router } from '@angular/router';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
-import { LoginService } from '../../services/login_service';
-import { ToasterService } from '../toaster/toaster.service';
-import { PsresetService } from '../../services/psreset_service';
+import { LoginService } from '../../../services/login_service';
+import { ToasterService } from '../../toaster/toaster.service';
+import { PsresetService } from '../../../services/psreset_service';
 
 @Component({
   selector: 'app-welcomepage',
