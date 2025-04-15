@@ -91,7 +91,14 @@ nav {
     display: none;
     cursor: pointer;
   }
-  
+
+  .close {
+    display: flex;
+    justify-content: flex-end; 
+    cursor: pointer; 
+    margin-bottom: 10px; 
+    padding-left: 10px; 
+  }
   .sidebar {
     position: fixed;
     top: 0;

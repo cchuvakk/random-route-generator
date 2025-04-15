@@ -14,4 +14,8 @@ export class MainpageComponent {
     this.sidebarVisible = !this.sidebarVisible;
   }
 
+  toggleSidebarLeave(){
+    this.sidebarVisible = false;
+  }
+
 }
