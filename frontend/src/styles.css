@@ -28,5 +28,15 @@ body.main-page {
   overflow-x: hidden;
 }
 
+body.welcome-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #dfdfdf;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
 
 
