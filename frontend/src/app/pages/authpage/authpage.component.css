@@ -6,13 +6,12 @@ padding: 0;
 box-sizing: border-box;
 font-family: 'Poppins', sans-serif;
 }
-body{
+.auth-page-wrapper {
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    background: #dfdfdf;
-}
+  }
 .auth-container{
     display: flex;
     justify-content: center;
