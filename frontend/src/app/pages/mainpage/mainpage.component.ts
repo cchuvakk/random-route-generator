@@ -27,7 +27,8 @@ export class MainpageComponent implements AfterViewInit{
       container: 'map',
       style: 'https://basemaps.cartocdn.com/gl/voyager-gl-style/style.json',//с впн то `https://api.maptiler.com/maps/streets/style.json?key=${MAPTILER_KEY}`,
       center: [55.7522, 37.6156], 
-      zoom: 7
+      zoom: 7,
+      attributionControl: false
     });
 
     map.on('click', (e) => {
