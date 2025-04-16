@@ -24,12 +24,12 @@ import {
   querystring,
   querystringDecode,
   registerVersion
-} from "./chunk-ASXXPYQD.js";
+} from "./chunk-5VZKJ56E.js";
 import {
   __async
 } from "./chunk-YHCV7DAQ.js";
 
-// ../node_modules/tslib/tslib.es6.mjs
+// node_modules/tslib/tslib.es6.mjs
 function __rest(s, e) {
   var t = {};
   for (var p in s) if (Object.prototype.hasOwnProperty.call(s, p) && e.indexOf(p) < 0) t[p] = s[p];
@@ -39,7 +39,7 @@ function __rest(s, e) {
   return t;
 }
 
-// ../node_modules/@firebase/auth/dist/node-esm/totp-7829abf2.js
+// node_modules/@firebase/auth/dist/node-esm/totp-7829abf2.js
 var FactorId = {
   /** Phone as second factor */
   PHONE: "phone",

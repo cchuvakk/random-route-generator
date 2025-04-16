@@ -26,16 +26,16 @@ import {
   querystring,
   querystringDecode,
   registerVersion
-} from "./chunk-ZMVIFO2C.js";
+} from "./chunk-UP7PBA6T.js";
 import {
   __rest
-} from "./chunk-5HRTCKZ7.js";
+} from "./chunk-IYEYSCYL.js";
 import {
   __async,
   __superGet
 } from "./chunk-5K356HEJ.js";
 
-// ../node_modules/@firebase/auth/dist/esm2017/index-c92d61ad.js
+// node_modules/@firebase/auth/dist/esm2017/index-c92d61ad.js
 var FactorId = {
   /** Phone as second factor */
   PHONE: "phone",

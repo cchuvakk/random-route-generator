@@ -21,10 +21,10 @@ import {
   onLog,
   registerVersion,
   setLogLevel
-} from "./chunk-ZMVIFO2C.js";
+} from "./chunk-UP7PBA6T.js";
 import "./chunk-5K356HEJ.js";
 
-// ../node_modules/firebase/app/dist/esm/index.esm.js
+// node_modules/firebase/app/dist/esm/index.esm.js
 var name = "firebase";
 var version = "11.6.0";
 registerVersion(name, version, "app");
