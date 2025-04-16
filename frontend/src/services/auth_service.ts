@@ -14,7 +14,7 @@ export class AuthService {
         .then((userCredential) => {
             const user = userCredential.user;
 
-            return this.http.post('http://localhost:8080/api/users', {
+            return this.http.post('http://localhost:8080/api/users/register', {
                 uid: user.uid,
                 email: user.email
               }).toPromise();

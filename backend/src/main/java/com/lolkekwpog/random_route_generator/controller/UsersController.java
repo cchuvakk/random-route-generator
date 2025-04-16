@@ -2,7 +2,6 @@ package com.lolkekwpog.random_route_generator.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,6 +13,7 @@ import com.lolkekwpog.random_route_generator.service.UsersService;
 
 @RestController
 @RequestMapping("api/users")
+//@CrossOrigin(origins = "http://localhost:4200") мб понадобится завтра зачекаю
 public class UsersController {
     
     @Autowired
