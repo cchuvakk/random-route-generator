@@ -1,6 +1,7 @@
 import { Component, AfterViewInit } from '@angular/core';
 import maplibregl from 'maplibre-gl';
 import { MAPTILER_KEY } from '../../../environments/environment';
+import { Router } from '@angular/router';
 //import * as L from 'leaflet'; (npm install leaflet) (npm i --save-dev @types/leaflet) --ошибка windows
 
 
@@ -12,6 +13,8 @@ import { MAPTILER_KEY } from '../../../environments/environment';
   styleUrl: './mainpage.component.css'
 })
 export class MainpageComponent implements AfterViewInit{
+
+  constructor(private router: Router) {}
   sidebarVisible = false;
 
   toggleSidebar() {
@@ -20,6 +23,10 @@ export class MainpageComponent implements AfterViewInit{
 
   toggleSidebarLeave(){
     this.sidebarVisible = false;
+  }
+
+  navigateToWelcomePage(): void {
+    this.router.navigate(['/welcomepage']);
   }
 
   ngAfterViewInit(): void {
