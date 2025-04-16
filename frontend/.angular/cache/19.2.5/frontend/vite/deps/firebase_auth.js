@@ -1,4 +1,7 @@
 import {
+  __rest
+} from "./chunk-IYEYSCYL.js";
+import {
   Component,
   ErrorFactory,
   FirebaseError,
@@ -26,14 +29,11 @@ import {
   querystring,
   querystringDecode,
   registerVersion
-} from "./chunk-UP7PBA6T.js";
-import {
-  __rest
-} from "./chunk-IYEYSCYL.js";
+} from "./chunk-UUV2TGDN.js";
 import {
   __async,
   __superGet
-} from "./chunk-5K356HEJ.js";
+} from "./chunk-K4KU7J5H.js";
 
 // node_modules/@firebase/auth/dist/esm2017/index-c92d61ad.js
 var FactorId = {

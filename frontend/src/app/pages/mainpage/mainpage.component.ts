@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
-//import * as L from 'leaflet'; (npm install leaflet) (npm i --save-dev @types/leaflet)
+import { Component, AfterViewInit } from '@angular/core';
+import maplibregl from 'maplibre-gl';
+import { MAPTILER_KEY } from '../../../environments/environment';
+//import * as L from 'leaflet'; (npm install leaflet) (npm i --save-dev @types/leaflet) --ошибка windows
 
 
 @Component({
@@ -9,7 +11,7 @@ import { Component } from '@angular/core';
   templateUrl: './mainpage.component.html',
   styleUrl: './mainpage.component.css'
 })
-export class MainpageComponent {
+export class MainpageComponent implements AfterViewInit{
   sidebarVisible = false;
 
   toggleSidebar() {
@@ -20,10 +22,24 @@ export class MainpageComponent {
     this.sidebarVisible = false;
   }
 
+  ngAfterViewInit(): void {
+    const map = new maplibregl.Map({
+      container: 'map',
+      style: 'https://basemaps.cartocdn.com/gl/voyager-gl-style/style.json',//с впн то `https://api.maptiler.com/maps/streets/style.json?key=${MAPTILER_KEY}`,
+      center: [55.7522, 37.6156], 
+      zoom: 7
+    });
+
+    map.on('click', (e) => {
+      console.log('Клик по карте:', e.lngLat);
+    });
+  }
+
 }
 
 
 /*
+leaflet
 private map: L.Map | undefined;
 implements AfterViewInit 
  private initMap(): void {
@@ -34,4 +50,20 @@ implements AfterViewInit
     }).addTo(this.map);
   }
 
+*/
+
+/*
+maplibre
+ngAfterViewInit(): void {
+    const map = new maplibregl.Map({
+      container: 'map',
+      style: 'https://demotiles.maplibre.org/style.json',
+      center: [13.4050, 52.5200], //мир
+      zoom: 0
+    });
+
+    map.on('click', (e) => {
+      console.log('Клик по карте:', e.lngLat);
+    });
+  }
 */
