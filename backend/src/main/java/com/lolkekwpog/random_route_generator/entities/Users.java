@@ -30,21 +30,20 @@ public class Users {
         name = "firebase_uid",
         nullable = false
     )
-    private String firebase_uid;
+    private String firebaseuid;
 
     @Column
     (
-        name = "username",
-        nullable = false
+        name = "username"
     )
     private String username;
     
     public Users(){ }
 
-    public Users(int id, String firebase_uid, String username)
+    public Users(int id, String firebaseuid, String username)
     {
         this.id = id;
-        this.firebase_uid = firebase_uid;
+        this.firebaseuid = firebaseuid;
         this.username = username;
     }
 
@@ -58,14 +57,14 @@ public class Users {
         this.id = id;
     }
 
-    public String getFirebaseUid()
+    public String getFirebaseuid()
     {
-        return firebase_uid;
+        return firebaseuid;
     }
 
-    public void setFirebaseId(String firebase_uid)
+    public void setFirebaseuid(String firebaseuid)
     {
-        this.firebase_uid = firebase_uid;
+        this.firebaseuid = firebaseuid;
     }
 
     public String getUsername()
