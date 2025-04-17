@@ -26,9 +26,9 @@
           <span>й</span>
         </div>
       </li>
-      <li><a routerLink="/about">О приложении</a></li>
-      <li><a routerLink="/profile">Профиль</a></li>
-      <li><a routerLink="/welcome">Выйти</a></li>
+      <li><a routerLink="/aboutpage">О приложении</a></li>
+      <li><a routerLink="/profilepage">Профиль</a></li>
+      <li><a routerLink="/welcomepage">Выйти</a></li>
       <li class="burger" (click)="toggleSidebar()">
         <svg xmlns="http://www.w3.org/2000/svg" height="26px" viewBox="0 -960 960 960" width="26px" fill="#000"><path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/></svg>
       </li>
@@ -40,7 +40,7 @@
       </li>
       <li><a routerLink="/aboutpage">О приложении</a></li>
       <li><a routerLink="/profilepage">Профиль</a></li>
-      <li><a (click)="navigateToWelcomePage()">Выйти</a></li>
+      <li><a routerLink="/welcomepage">Выйти</a></li>
     </ul>
   </nav>
   <div id="map"></div>

@@ -1,14 +1,14 @@
 import { Component, AfterViewInit } from '@angular/core';
 import maplibregl from 'maplibre-gl';
 import { MAPTILER_KEY } from '../../../environments/environment';
-import { Router } from '@angular/router';
+import { Router, RouterModule } from '@angular/router';
 //import * as L from 'leaflet'; (npm install leaflet) (npm i --save-dev @types/leaflet) --ошибка windows
 
 
 @Component({
   selector: 'app-mainpage',
   standalone: true,
-  imports: [],
+  imports: [RouterModule],
   templateUrl: './mainpage.component.html',
   styleUrl: './mainpage.component.css'
 })
@@ -25,7 +25,7 @@ export class MainpageComponent implements AfterViewInit{
     this.sidebarVisible = false;
   }
 
-  navigateToWelcomePage(): void {
+  navigateToWelcomePage() {
     this.router.navigate(['/welcomepage']);
   }
 
