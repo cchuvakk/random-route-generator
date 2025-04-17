@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { AuthService } from '../../../services/auth_service';
+import { ToasterService } from '../../toaster/toaster.service';
+import { Router } from '@angular/router';
 
 
 
@@ -20,16 +22,22 @@ export class AuthpageComponent {
   password = '';
   confirmPassword = '';
 
-  constructor(private authService: AuthService){}
+  constructor(private router: Router,private authService: AuthService,
+ private toasterService: ToasterService
+  ){}
   
 
-  onRegister(){
+  onRegister(): void {
     if (this.password !== this.confirmPassword) {
-      return console.log('Пароли не совпадают');
-  }
-  this.authService.register(this.email, this.password)
-      .then(user => console.log('Зарегистрирован:', user))
-      .catch(err => console.error('Ошибка регистрации:', err.message));
- }
+      this.toasterService.error("Ошибка", "Пароли не совпадают!");
+      return; 
+    }
+  
+    this.authService.register(this.email, this.password)
+      .then(() => {
+        this.toasterService.success('Успешно!', 'Вы успешно зарегистрировались!');
+        this.router.navigate(['/welcomepage']);
+      })
+  }  
 }
 
