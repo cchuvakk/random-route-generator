@@ -15,15 +15,6 @@ import { Router, RouterModule } from '@angular/router';
 export class MainpageComponent implements AfterViewInit{
 
   constructor(private router: Router) {}
-  sidebarVisible = false;
-
-  toggleSidebar() {
-    this.sidebarVisible = !this.sidebarVisible;
-  }
-
-  toggleSidebarLeave(){
-    this.sidebarVisible = false;
-  }
 
   navigateToWelcomePage() {
     this.router.navigate(['/welcomepage']);
