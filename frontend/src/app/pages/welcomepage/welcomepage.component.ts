@@ -16,6 +16,8 @@ import { PsresetService } from '../../../services/psreset_service';
 export class WelcomepageComponent {
   email: string = '';
   password: string = '';
+  rememberMe: boolean = false;
+
   
   constructor(private router: Router,
     private loginService: LoginService,
@@ -25,13 +27,15 @@ export class WelcomepageComponent {
   
 
 
-  onLogin(){
-    this.loginService.login(this.email, this.password).then(() => {
-      this.toasterService.success('Успешно!', 'Вы вошли в аккаунт!'),
-      this.router.navigate(['/mainpage']); 
-    }).catch((error) => {
-      this.toasterService.error('Ошибка!', 'Что то пошло не так D:')
-    });
+  onLogin() {
+    this.loginService.login(this.email, this.password, this.rememberMe)
+      .then(() => {
+        this.toasterService.success('Успешно!', 'Вы вошли в аккаунт!');
+        this.router.navigate(['/mainpage']);
+      })
+      .catch((error) => {
+        this.toasterService.error('Ошибка!', 'Что-то пошло не так D:');
+      });
   }
 
   navigateToRegister() {

@@ -4,11 +4,12 @@ import { ToasterComponent } from './toaster/toaster.component';
 import { filter } from 'rxjs';
 import { Router, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, ToasterComponent, CommonModule, RouterModule],
+  imports: [RouterOutlet, ToasterComponent, CommonModule, RouterModule, FormsModule],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
