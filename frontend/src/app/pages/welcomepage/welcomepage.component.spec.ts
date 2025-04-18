@@ -2,10 +2,9 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { WelcomepageComponent } from './welcomepage.component';
 import { Router } from '@angular/router';
 import { LoginService } from '../../../services/login_service';
-import { error } from 'console';
 import { ToasterService } from '../../toaster/toaster.service'; //ng test
 
-fdescribe('WelcomepageComponent - Check Router', () => { //групировка тестов, fdescribe для ток его запуска
+fdescribe('WelcomepageComponent - Check funs', () => { //групировка тестов, fdescribe для ток его запуска
   let component: WelcomepageComponent;
   let fixture: ComponentFixture<WelcomepageComponent> //п
   let routerSpy: jasmine.SpyObj<Router> 
