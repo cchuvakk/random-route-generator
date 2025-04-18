@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { AuthService } from '../../../services/auth_service';
 import { ToasterService } from '../../toaster/toaster.service';
 import { Router } from '@angular/router';
+import { error } from 'console';
 
 
 
@@ -38,6 +39,9 @@ export class AuthpageComponent {
         this.toasterService.success('Успешно!', 'Вы успешно зарегистрировались!');
         this.router.navigate(['/welcomepage']);
       })
+      .catch((error) => {
+        this.toasterService.error('Ошибка!', 'Что-то пошло не так D:');
+      });
   }  
 }
 

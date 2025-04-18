@@ -1,17 +1,17 @@
-<div class = "welcome-page-wrapper">
+<form (ngSubmit)="onLogin()" class = "welcome-page-wrapper">
 <div class="login-container">
     <div class = "login-header">
         <header>Войти</header>
     </div>
     <div class ="input-box">
-        <input type="email" class="input-field" placeholder="Почта" [(ngModel)]="email" autocomplete="off" required>
+        <input type="email" class="input-field" placeholder="Почта" [(ngModel)]="email" name="email" autocomplete="off" required>
     </div>
     <div class="input-box">
-        <input type="password" class="input-field" placeholder="Пароль" [(ngModel)]="password" autocomplete="off" required>
+        <input type="password" class="input-field" placeholder="Пароль" [(ngModel)]="password" name="password" autocomplete="off" required>
     </div>
     <div class = "forgot">
         <section>
-            <input type="checkbox" id="check" [(ngModel)]="rememberMe">
+            <input type="checkbox" id="check" [(ngModel)]="rememberMe" name="rememberMe" >
             <label for="check">Запомнить меня</label>
         </section>
         <section>
@@ -19,11 +19,11 @@
         </section>
     </div>
     <div class = "input-submit">
-        <button class ="submit-btn" (click)="onLogin()" id="submit"></button>
+        <button class ="submit-btn" type="submit" id="submit"></button>
         <label for="submit">Войти</label>
     </div>
     <div class = "sign-up-link">
         <p>Нет аккаунта?<a (click)="navigateToRegister()"> Зарегистрироваться!</a></p>
     </div>
   </div>
-</div>
+</form>
