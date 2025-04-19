@@ -29,9 +29,9 @@ export class MainpageComponent implements AfterViewInit{
       attributionControl: false
     });
 
-    map.on('click', (e) => {
-      console.log('Клик по карте:', e.lngLat);
-    });
+    /*map.on('click', (e) => {
+      console.log('Клик по карте:', e.lngLat); //регает
+    });*/
   }
 
 }
