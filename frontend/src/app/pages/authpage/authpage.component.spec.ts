@@ -31,6 +31,7 @@ describe('AuthpageComponent - Check funs', () => {
   });
 
   it('на /authpage зарегался надеюсь', async () => {
+    
     component.email = 'poggers7331@gmail.com'
     component.password = 'lol123'
     component.confirmPassword = '1231213'
